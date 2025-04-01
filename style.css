@@ -1,0 +1,324 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #1d7ad6, #2f5a5c);
+    color: rgb(197, 219, 219);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ddd;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: teal;
+    font-weight: bold;
+}
+
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1rem;
+    color: salmon;
+}
+
+/* Flexbox Layout for Grid Section */
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.grid-item {
+    background-color: orchid;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid lightgray;
+    flex: 1 1 calc(25% - 1rem); /* 4 items per row */
+    max-width: calc(25% - 1rem);
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 2rem 1rem;
+    background-color: #faa3a3;
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Services Section */
+.services {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #be8383;
+}
+
+.services h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #2c2828;
+}
+
+.services table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.services th,
+.services td {
+    padding: 0.8rem;
+    border: 1px solid #444040;
+}
+
+.services th {
+    background-color: #333;
+    color: rgb(196, 183, 183);
+    font-weight: italic;
+}
+
+.services tr:nth-child(even) {
+    background-color: #5a5454;
+}
+
+.services tr:hover {
+    background-color: #c4b5b5;
+}
+
+/* About Section */
+.about {
+    padding: 2rem 1rem;
+    background-color: #daacac;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 1 1 calc(50% - 1rem); /* 2 items per row */
+        max-width: calc(50% - 1rem);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-form form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .services table {
+        font-size: 0.9rem;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 1 1 100%; /* 1 item per row */
+        max-width: 100%;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        gap: 0.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .services h2 {
+        font-size: 1.5rem;
+    }
+
+    .services table {
+        font-size: 0.8rem;
+    }
+
+    .services th,
+    .services td {
+        padding: 0.5rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+}
